@@ -297,6 +297,20 @@
     color: var(--text-body); font-weight: 300;
   }
 
+  /* ── LANG BTN ── */
+  .lang-btn {
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid rgba(204,191,167,0.4);
+    border-radius: 2px;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  .lang-btn:hover { background: rgba(204,191,167,0.15); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .nav { padding: 1rem 1.25rem; }
@@ -342,54 +356,57 @@
 <!-- NAV -->
 <nav class="nav">
   <a href="https://investinspain.be/" class="nav-logo" target="_blank"><img src="https://investinspain.be/wp-content/uploads/2024/01/Logo-investinspain.white_.webp" alt="InvestInSpain"></a>
-  <a href="https://wa.me/32496571397?text=Hallo%2C%20ik%20wil%20me%20graag%20inschrijven%20voor%20pre-launch%20access." class="nav-cta" target="_blank">Schrijf je in</a>
+  <div style="display:flex;align-items:center;gap:0.75rem;">
+    <button class="lang-btn" onclick="toggleLang()" id="lang-btn">EN</button>
+    <a href="https://wa.me/32496571397?text=Hallo%2C%20ik%20wil%20me%20graag%20inschrijven%20voor%20pre-launch%20access." class="nav-cta" target="_blank" data-nl="Schrijf je in" data-en="Sign up">Schrijf je in</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">Pre-Launch Access</div>
-    <h1>Krijg eerste keuze.<br><em>Bespaar tot 15%.</em></h1>
-    <p class="hero-sub">Krijg als eerste toegang tot exclusieve nieuwbouwprojecten aan de Costa del Sol — vóórdat ze publiek gelanceerd worden.</p>
+    <h1 data-nl="Krijg eerste keuze.<br><em>Bespaar tot 15%.</em>" data-en="Get first choice.<br><em>Save up to 15%.</em>">Krijg eerste keuze.<br><em>Bespaar tot 15%.</em></h1>
+    <p class="hero-sub" data-nl="Krijg als eerste toegang tot exclusieve nieuwbouwprojecten aan de Costa del Sol — vóórdat ze publiek gelanceerd worden." data-en="Get early access to exclusive new-build projects on the Costa del Sol — before they go public.">Krijg als eerste toegang tot exclusieve nieuwbouwprojecten aan de Costa del Sol — vóórdat ze publiek gelanceerd worden.</p>
     <div class="hero-price">
-      <span class="amount">Gratis</span>
-      <span class="label">toegang tot de pre-launch groep</span>
+      <span class="amount" data-nl="Gratis" data-en="Free">Gratis</span>
+      <span class="label" data-nl="toegang tot de pre-launch groep" data-en="access to the pre-launch group">toegang tot de pre-launch groep</span>
     </div>
-    <a href="https://wa.me/32496571397?text=Hallo%2C%20ik%20wil%20me%20graag%20inschrijven%20voor%20pre-launch%20access." class="btn-primary" target="_blank">Claim jouw plek</a>
-    <p class="hero-note">Beperkt aantal plaatsen — inschrijving kan op elk moment stoppen.</p>
+    <a href="https://wa.me/32496571397?text=Hallo%2C%20ik%20wil%20me%20graag%20inschrijven%20voor%20pre-launch%20access." class="btn-primary" target="_blank" data-nl="Claim jouw plek" data-en="Claim your spot">Claim jouw plek</a>
+    <p class="hero-note" data-nl="Beperkt aantal plaatsen — inschrijving kan op elk moment stoppen." data-en="Limited spots available — registration may close at any time.">Beperkt aantal plaatsen — inschrijving kan op elk moment stoppen.</p>
   </div>
 </section>
 
 <!-- USPs -->
 <section class="usps">
   <div class="section-inner">
-    <div class="section-eyebrow">Waarom pre-launch</div>
-    <h2 class="section-title">Het voordeel van er eerst bij zijn</h2>
-    <p class="section-subtitle">Pre-launch kopers profiteren van betere prijzen, meer keuze en een beschermde investering.</p>
+    <div class="section-eyebrow" data-nl="Waarom pre-launch" data-en="Why pre-launch">Waarom pre-launch</div>
+    <h2 class="section-title" data-nl="Het voordeel van er eerst bij zijn" data-en="The advantage of being first">Het voordeel van er eerst bij zijn</h2>
+    <p class="section-subtitle" data-nl="Pre-launch kopers profiteren van betere prijzen, meer keuze en een beschermde investering." data-en="Pre-launch buyers benefit from better prices, more choice and a protected investment.">Pre-launch kopers profiteren van betere prijzen, meer keuze en een beschermde investering.</p>
     <div class="usps-grid">
 
       <div class="usp-card">
         <div class="usp-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="#ccbfa7" stroke-width="1.5"><path d="M12 2L9.5 9.5H2l6 4.5L5.5 22 12 17l6.5 5-2.5-8 6-4.5h-7.5z"/></svg>
         </div>
-        <h3>5–15% lagere prijs</h3>
-        <p>Ontwikkelaars bieden pre-launch kortingen aan om vroeg commitment te belonen. Jij koopt onder marktwaarde.</p>
+        <h3 data-nl="5–15% lagere prijs" data-en="5–15% lower price">5–15% lagere prijs</h3>
+        <p data-nl="Ontwikkelaars bieden pre-launch kortingen aan om vroeg commitment te belonen. Jij koopt onder marktwaarde." data-en="Developers offer pre-launch discounts to reward early commitment. You buy below market value.">Ontwikkelaars bieden pre-launch kortingen aan om vroeg commitment te belonen. Jij koopt onder marktwaarde.</p>
       </div>
 
       <div class="usp-card">
         <div class="usp-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="#ccbfa7" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         </div>
-        <h3>Beste keuze aan units</h3>
-        <p>Kies als eerste de gewildste locatie, oriëntatie en verdieping — niet wat er nog overblijft.</p>
+        <h3 data-nl="Beste keuze aan units" data-en="Best choice of units">Beste keuze aan units</h3>
+        <p data-nl="Kies als eerste de gewildste locatie, oriëntatie en verdieping — niet wat er nog overblijft." data-en="Be the first to choose the most sought-after location, orientation and floor — not what's left over.">Kies als eerste de gewildste locatie, oriëntatie en verdieping — niet wat er nog overblijft.</p>
       </div>
 
       <div class="usp-card">
         <div class="usp-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="#ccbfa7" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
-        <h3>Beschermd deposito</h3>
-        <p>Je investering is juridisch beschermd via een Spaanse bankgarantie. Geen risico, volledige transparantie.</p>
+        <h3 data-nl="Beschermd deposito" data-en="Protected deposit">Beschermd deposito</h3>
+        <p data-nl="Je investering is juridisch beschermd via een Spaanse bankgarantie. Geen risico, volledige transparantie." data-en="Your investment is legally protected by a Spanish bank guarantee. No risk, full transparency.">Je investering is juridisch beschermd via een Spaanse bankgarantie. Geen risico, volledige transparantie.</p>
       </div>
 
     </div>
@@ -399,24 +416,24 @@
 <!-- HOW IT WORKS -->
 <section class="how">
   <div class="section-inner">
-    <div class="section-eyebrow" style="color: rgba(204,191,167,0.6);">Hoe het werkt</div>
-    <h2 class="section-title">Van inschrijving tot sleutel</h2>
-    <p class="section-subtitle">Drie stappen. Geen verborgen kosten, geen verplichtingen.</p>
+    <div class="section-eyebrow" style="color: rgba(204,191,167,0.6);" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</div>
+    <h2 class="section-title" data-nl="Van inschrijving tot sleutel" data-en="From sign-up to keys">Van inschrijving tot sleutel</h2>
+    <p class="section-subtitle" data-nl="Drie stappen. Geen verborgen kosten, geen verplichtingen." data-en="Three steps. No hidden costs, no obligations.">Drie stappen. Geen verborgen kosten, geen verplichtingen.</p>
     <div class="how-steps">
 
       <div class="step">
-        <h3>Schrijf je gratis in</h3>
-        <p>Word gratis lid van de pre-launch groep en ontvang als eerste toegang tot exclusieve nieuwbouwprojecten.</p>
+        <h3 data-nl="Schrijf je gratis in" data-en="Sign up for free">Schrijf je gratis in</h3>
+        <p data-nl="Word gratis lid van de pre-launch groep en ontvang als eerste toegang tot exclusieve nieuwbouwprojecten." data-en="Join the pre-launch group for free and be the first to access exclusive new-build projects.">Word gratis lid van de pre-launch groep en ontvang als eerste toegang tot exclusieve nieuwbouwprojecten.</p>
       </div>
 
       <div class="step">
-        <h3>Ontvang projecten</h3>
-        <p>Je krijgt exclusief vroege toegang tot nieuwe projecten met volledige documentatie, plattegronden en prijzen.</p>
+        <h3 data-nl="Ontvang projecten" data-en="Receive projects">Ontvang projecten</h3>
+        <p data-nl="Je krijgt exclusief vroege toegang tot nieuwe projecten met volledige documentatie, plattegronden en prijzen." data-en="Get exclusive early access to new projects with full documentation, floor plans and prices.">Je krijgt exclusief vroege toegang tot nieuwe projecten met volledige documentatie, plattegronden en prijzen.</p>
       </div>
 
       <div class="step">
-        <h3>Kies & schrijf in</h3>
-        <p>Gevonden wat je zoekt? Schrijf je in op een project voor €500 (volledig terugbetaalbaar). Wij begeleiden je van A tot Z.</p>
+        <h3 data-nl="Kies & schrijf in" data-en="Choose & subscribe">Kies & schrijf in</h3>
+        <p data-nl="Gevonden wat je zoekt? Schrijf je in op een project voor €500 (volledig terugbetaalbaar). Wij begeleiden je van A tot Z." data-en="Found what you're looking for? Subscribe to a project for €500 (fully refundable). We guide you from A to Z.">Gevonden wat je zoekt? Schrijf je in op een project voor €500 (volledig terugbetaalbaar). Wij begeleiden je van A tot Z.</p>
       </div>
 
     </div>
@@ -426,32 +443,32 @@
 <!-- WHAT YOU GET -->
 <section class="included">
   <div class="section-inner">
-    <div class="section-eyebrow">Wat je krijgt</div>
-    <h2 class="section-title">Alles inbegrepen in je lidmaatschap</h2>
+    <div class="section-eyebrow" data-nl="Wat je krijgt" data-en="What you get">Wat je krijgt</div>
+    <h2 class="section-title" data-nl="Alles inbegrepen in je lidmaatschap" data-en="Everything included in your membership">Alles inbegrepen in je lidmaatschap</h2>
     <ul class="included-list">
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-        Vroege toegang tot alle pre-launch projecten
+        <span data-nl="Vroege toegang tot alle pre-launch projecten" data-en="Early access to all pre-launch projects">Vroege toegang tot alle pre-launch projecten</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-        Persoonlijke begeleiding door vastgoedexperts
+        <span data-nl="Persoonlijke begeleiding door vastgoedexperts" data-en="Personal guidance from real estate experts">Persoonlijke begeleiding door vastgoedexperts</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-        Volledige documentatie per project (plannen, prijzen, locatie)
+        <span data-nl="Volledige documentatie per project (plannen, prijzen, locatie)" data-en="Full documentation per project (plans, prices, location)">Volledige documentatie per project (plannen, prijzen, locatie)</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-        Juridische en fiscale ondersteuning
+        <span data-nl="Juridische en fiscale ondersteuning" data-en="Legal and tax support">Juridische en fiscale ondersteuning</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-        Bankgarantie op je deposito bij projectinschrijving
+        <span data-nl="Bankgarantie op je deposito bij projectinschrijving" data-en="Bank guarantee on your deposit upon project subscription">Bankgarantie op je deposito bij projectinschrijving</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>
-        €500 projectinschrijving volledig terugbetaalbaar
+        <span data-nl="€500 projectinschrijving volledig terugbetaalbaar" data-en="€500 project subscription fully refundable">€500 projectinschrijving volledig terugbetaalbaar</span>
       </li>
     </ul>
   </div>
@@ -460,24 +477,24 @@
 <!-- FAQ -->
 <section class="faq">
   <div class="section-inner">
-    <div class="section-eyebrow">Veelgestelde vragen</div>
-    <h2 class="section-title">Hoe zit het precies?</h2>
+    <div class="section-eyebrow" data-nl="Veelgestelde vragen" data-en="Frequently asked questions">Veelgestelde vragen</div>
+    <h2 class="section-title" data-nl="Hoe zit het precies?" data-en="How does it work exactly?">Hoe zit het precies?</h2>
     <div class="faq-grid">
       <div class="faq-item">
-        <h3>Kost het iets om lid te worden?</h3>
-        <p>Nee, de pre-launch groep is volledig gratis. Pas wanneer je je inschrijft op een specifiek project betaal je €500 — volledig terugbetaalbaar als je besluit niet te kopen.</p>
+        <h3 data-nl="Kost het iets om lid te worden?" data-en="Does it cost anything to join?">Kost het iets om lid te worden?</h3>
+        <p data-nl="Nee, de pre-launch groep is volledig gratis. Pas wanneer je je inschrijft op een specifiek project betaal je €500 — volledig terugbetaalbaar als je besluit niet te kopen." data-en="No, the pre-launch group is completely free. Only when you subscribe to a specific project do you pay €500 — fully refundable if you decide not to buy.">Nee, de pre-launch groep is volledig gratis. Pas wanneer je je inschrijft op een specifiek project betaal je €500 — volledig terugbetaalbaar als je besluit niet te kopen.</p>
       </div>
       <div class="faq-item">
-        <h3>Wat als geen enkel project me bevalt?</h3>
-        <p>Geen enkel probleem. Je bent nergens toe verplicht. Het lidmaatschap geeft je toegang — geen koopverplichting.</p>
+        <h3 data-nl="Wat als geen enkel project me bevalt?" data-en="What if none of the projects suit me?">Wat als geen enkel project me bevalt?</h3>
+        <p data-nl="Geen enkel probleem. Je bent nergens toe verplicht. Het lidmaatschap geeft je toegang — geen koopverplichting." data-en="No problem at all. You are under no obligation. The membership gives you access — no purchase required.">Geen enkel probleem. Je bent nergens toe verplicht. Het lidmaatschap geeft je toegang — geen koopverplichting.</p>
       </div>
       <div class="faq-item">
-        <h3>Welke regio's worden aangeboden?</h3>
-        <p>Voornamelijk Costa del Sol (Málaga, Marbella, Estepona) — de populairste regio's voor vastgoedinvesteerders.</p>
+        <h3 data-nl="Welke regio's worden aangeboden?" data-en="Which regions are offered?">Welke regio's worden aangeboden?</h3>
+        <p data-nl="Voornamelijk Costa del Sol (Málaga, Marbella, Estepona) — de populairste regio's voor vastgoedinvesteerders." data-en="Mainly Costa del Sol (Málaga, Marbella, Estepona) — the most popular regions for property investors.">Voornamelijk Costa del Sol (Málaga, Marbella, Estepona) — de populairste regio's voor vastgoedinvesteerders.</p>
       </div>
       <div class="faq-item">
-        <h3>Hoe snel krijg ik toegang?</h3>
-        <p>Direct na inschrijving ontvang je je eerste projectoverzichten. Nieuwe pre-launches volgen zodra ze beschikbaar zijn.</p>
+        <h3 data-nl="Hoe snel krijg ik toegang?" data-en="How quickly do I get access?">Hoe snel krijg ik toegang?</h3>
+        <p data-nl="Direct na inschrijving ontvang je je eerste projectoverzichten. Nieuwe pre-launches volgen zodra ze beschikbaar zijn." data-en="Immediately after signing up you receive your first project overviews. New pre-launches follow as soon as they become available.">Direct na inschrijving ontvang je je eerste projectoverzichten. Nieuwe pre-launches volgen zodra ze beschikbaar zijn.</p>
       </div>
     </div>
   </div>
@@ -486,19 +503,36 @@
 <!-- CTA -->
 <section class="cta-section" id="signup">
   <div class="section-inner">
-    <div class="section-eyebrow" style="color: rgba(204,191,167,0.6);">Klaar om te starten?</div>
-    <h2 class="section-title">Verzeker jouw pre-launch toegang</h2>
-    <p class="section-subtitle">Sluit je aan bij een selecte groep investeerders die als eerste kiezen — en het beste krijgen.</p>
-    <div class="cta-price">Gratis</div>
-    <p class="cta-price-note">Geen kosten · geen verplichtingen · direct toegang</p>
-    <a href="https://wa.me/32496571397?text=Hallo%2C%20ik%20wil%20me%20graag%20inschrijven%20voor%20pre-launch%20access." class="btn-primary" target="_blank">Schrijf je nu in</a>
+    <div class="section-eyebrow" style="color: rgba(204,191,167,0.6);" data-nl="Klaar om te starten?" data-en="Ready to get started?">Klaar om te starten?</div>
+    <h2 class="section-title" data-nl="Verzeker jouw pre-launch toegang" data-en="Secure your pre-launch access">Verzeker jouw pre-launch toegang</h2>
+    <p class="section-subtitle" data-nl="Sluit je aan bij een selecte groep investeerders die als eerste kiezen — en het beste krijgen." data-en="Join a select group of investors who choose first — and get the best.">Sluit je aan bij een selecte groep investeerders die als eerste kiezen — en het beste krijgen.</p>
+    <div class="cta-price" data-nl="Gratis" data-en="Free">Gratis</div>
+    <p class="cta-price-note" data-nl="Geen kosten · geen verplichtingen · direct toegang" data-en="No costs · no obligations · instant access">Geen kosten · geen verplichtingen · direct toegang</p>
+    <a href="https://wa.me/32496571397?text=Hallo%2C%20ik%20wil%20me%20graag%20inschrijven%20voor%20pre-launch%20access." class="btn-primary" target="_blank" data-nl="Schrijf je nu in" data-en="Sign up now">Schrijf je nu in</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© INVESTINSPAIN.BE 2020 | Alle rechten voorbehouden | BA en borgstelling via NV AXA Belgium (polisnr. 730.390.160) · <a href="https://investinspain.be/privacy-policy/" target="_blank">Privacy Policy</a></p>
+  <p data-nl="© INVESTINSPAIN.BE 2020 | Alle rechten voorbehouden | BA en borgstelling via NV AXA Belgium (polisnr. 730.390.160) · " data-en="© INVESTINSPAIN.BE 2020 | All rights reserved | PI and bond via NV AXA Belgium (policy nr. 730.390.160) · ">© INVESTINSPAIN.BE 2020 | Alle rechten voorbehouden | BA en borgstelling via NV AXA Belgium (polisnr. 730.390.160) · <a href="https://investinspain.be/privacy-policy/" target="_blank">Privacy Policy</a></p>
 </footer>
 
+<script>
+  let currentLang = 'nl';
+  function toggleLang() {
+    currentLang = currentLang === 'nl' ? 'en' : 'nl';
+    document.getElementById('lang-btn').textContent = currentLang === 'nl' ? 'EN' : 'NL';
+    document.querySelectorAll('[data-' + currentLang + ']').forEach(function(el) {
+      if (el.tagName === 'A' && el.querySelector('*')) return;
+      if (el.children.length === 0 || el.tagName === 'H1') {
+        el.innerHTML = el.getAttribute('data-' + currentLang);
+      }
+    });
+    document.querySelectorAll('a[data-' + currentLang + ']').forEach(function(el) {
+      var txt = el.getAttribute('data-' + currentLang);
+      if (txt) el.textContent = txt;
+    });
+  }
+</script>
 </body>
 </html>
